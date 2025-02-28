@@ -1,0 +1,11 @@
+.route:hover {
+	color: #387ed1;
+}
+.route:active {
+	color: #387ed1;
+	font-weight: 600;
+}
+.navbar {
+	padding-left: 85px !important;
+	padding-right: 65px !important;
+}
