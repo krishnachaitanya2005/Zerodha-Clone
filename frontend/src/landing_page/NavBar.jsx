@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
@@ -6,9 +7,9 @@ function NavBar() {
 		<div className="container mw-100 m-0 p-0 sticky-top bg-white">
 			<nav className="navbar navbar-expand-lg border-bottom px-5">
 				<div className="container-fluid ms-5 ps-5 p-1 navbar">
-					<a className="navbar-brand" href="#">
+					<Link className="navbar-brand" to="/">
 						<img className="w-25 h-25" src="media\logo.svg" />
-					</a>
+					</Link>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -26,34 +27,34 @@ function NavBar() {
 					>
 						<ul className="navbar-nav column-gap-4">
 							<li className="nav-item">
-								<a className="nav-link route" href="#">
+								<Link className="nav-link route" to="/signup">
 									Signup
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link route" href="#">
+								<Link className="nav-link route" to="/about">
 									About
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link route" href="#">
+								<Link className="nav-link route" to="/products">
 									Products
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link route" href="#">
+								<Link className="nav-link route" to="/pricing">
 									Pricing
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link route" href="#">
+								<Link className="nav-link route" to="/support">
 									Support
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">
+								<Link className="nav-link" to="/">
 									<i class="fa-solid fa-bars fs-5"></i>
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>

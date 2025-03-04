@@ -1,121 +1,186 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
 	return (
-		<div className="container">
-			<div className="row">
-				<div className="row">
+		<footer style={{ backgroundColor: "rgb(250, 250, 250)" }}>
+			<div className="container border-top mt-5 text-light-emphasis">
+				<div className="row mt-5">
 					<div className="col">
-						<img className="w-25 h-25" src="media\logo.svg" />
-						<br />
-						© 2010 - 2025, Zerodha Broking Ltd. <br />
-						All rights reserved.
-						<div>
-							<i class="fa-brands fa-x-twitter"></i>
-							<i class="fa-brands fa-facebook"></i>
-							<i class="fa-brands fa-instagram"></i>
-							<i class="fa-brands fa-linkedin-in"></i>
+						<img
+							src="media/logo.svg"
+							style={{ width: "50%", paddingBottom: "10px" }}
+						/>
+						<p>
+							&copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
+						</p>
+						<div className="social-icons pb-3">
+							<i class="fa-brands fa-x-twitter px-3"></i>
+							<i class="fa-brands fa-facebook px-3"></i>
+							<i class="fa-brands fa-instagram px-3"></i>
+							<i class="fa-brands fa-linkedin-in px-3"></i>
 						</div>
-						<div>
-							<i class="fa-brands fa-youtube"></i>
-							<i class="fa-brands fa-whatsapp"></i>
-							<i class="fa-brands fa-telegram"></i>
+						<div className="social-icons">
+							<i class="fa-brands fa-youtube px-3"></i>
+							<i class="fa-brands fa-whatsapp px-3"></i>
+							<i class="fa-brands fa-telegram px-3"></i>
 						</div>
 					</div>
 					<div className="col">
-						<h3>Company</h3>
-						<a href="">About </a>
+						<p className="fs-5 fw-semibold">Company</p>
+						<a className="fw-semibold" href="">
+							About
+						</a>
 						<br />
-						<a href="">Products </a>
+						<a className="fw-semibold" href="">
+							Products
+						</a>
 						<br />
-						<a href="">Pricing </a>
+						<a className="fw-semibold" href="">
+							Pricing
+						</a>
 						<br />
-						<a href="">Referral </a>
+						<a className="fw-semibold" href="">
+							Referral programme
+						</a>
 						<br />
-						<a href="">programme </a>
+						<a className="fw-semibold" href="">
+							Careers
+						</a>
 						<br />
-						<a href="">Careers</a>
+						<a className="fw-semibold" href="">
+							Zerodha.tech
+						</a>
 						<br />
-						<a href="">Zerodha.tech </a>
+						<a className="fw-semibold" href="">
+							Press & media
+						</a>
 						<br />
-						<a href="">Open source </a>
-						<br />
-						<a href="">Press & media </a>
-						<br />
-						<a href="">Zerodha Cares (CSR)</a>
-						<br />
-					</div>
-					<div className="col">
-						<h3>Support</h3>
-						<a href="">Contact us</a>
-						<br />
-						<a href="">Support portal</a>
-						<br />
-						<a href="">Z-Connect blog</a>
-						<br />
-						<a href="">List of charges</a>
-						<br />
-						<a href="">Downloads & resources</a>
-						<br />
-						<a href="">Videos</a>
-						<br />
-						<a href="">Market overview</a>
-						<br />
-						<a href="">How to file a complaint?</a>
-						<br />
-						<a href="">Status of your complaints </a>
+						<a className="fw-semibold" href="">
+							Zerodha cares (CSR)
+						</a>
 						<br />
 					</div>
 					<div className="col">
-						<h3>Account</h3>
-						<a href="">Open an account</a>
+						<p className="fs-5 fw-semibold">Support</p>
+						<a className="fw-semibold" href="">
+							Contact
+						</a>
 						<br />
-						<a href="">Fund transfer </a>
+						<a className="fw-semibold" href="">
+							Support portal
+						</a>
+						<br />
+						<a className="fw-semibold" href="">
+							Z-Connect blog
+						</a>
+						<br />
+						<a className="fw-semibold" href="">
+							List of charges
+						</a>
+						<br />
+						<a className="fw-semibold" href="">
+							Downloads & resources
+						</a>
+						<br />
+					</div>
+					<div className="col">
+						<p className="fs-5 fw-semibold">Account</p>
+						<a className="fw-semibold" href="">
+							Open an account
+						</a>
+						<br />
+						<a className="fw-semibold" href="">
+							Fund transfer
+						</a>
+						<br />
+						<a className="fw-semibold" href="">
+							60 day challenge
+						</a>
 						<br />
 					</div>
 				</div>
-				<div className="row">
-					Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
-					no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha
-					Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity Trading
-					through Zerodha Commodities Pvt. Ltd. MCX: 46025; NSE-50001 – SEBI
-					Registration no.: INZ000038238 Registered Address: Zerodha Broking
-					Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public
-					School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For
-					any complaints pertaining to securities broking please write to
-					complaints@zerodha.com, for DP related to dp@zerodha.com. Please
-					ensure you carefully read the Risk Disclosure Document as prescribed
-					by SEBI | ICF Procedure to file a complaint on SEBI SCORES: Register
-					on SCORES portal. Mandatory details for filing complaints on SCORES:
-					Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective
-					Communication, Speedy redressal of the grievances Smart Online Dispute
-					Resolution | Grievances Redressal Mechanism Investments in securities
-					market are subject to market risks; read all the related documents
-					carefully before investing. Attention investors: 1) Stock brokers can
-					accept securities as margins from clients only by way of pledge in the
-					depository system w.e.f September 01, 2020. 2) Update your e-mail and
-					phone number with your stock broker / depository participant and
-					receive OTP directly from depository on your e-mail and/or mobile
-					number to create pledge. 3) Check your securities / MF / bonds in the
-					consolidated account statement issued by NSDL/CDSL every month.
-					"Prevent unauthorised transactions in your account. Update your mobile
-					numbers/email IDs with your stock brokers. Receive information of your
-					transactions directly from Exchange on your mobile/email at the end of
-					the day. Issued in the interest of investors. KYC is one time exercise
-					while dealing in securities markets - once KYC is done through a SEBI
-					registered intermediary (broker, DP, Mutual Fund etc.), you need not
-					undergo the same process again when you approach another
-					intermediary." Dear Investor, if you are subscribing to an IPO, there
-					is no need to issue a cheque. Please write the Bank account number and
-					sign the IPO application form to authorize your bank to make payment
-					in case of allotment. In case of non allotment the funds will remain
-					in your bank account. As a business we don't give stock tips, and have
-					not authorized anyone to trade on behalf of others. If you find anyone
-					claiming to be part of Zerodha and offering such services, please
-					create a ticket here.
+				<div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
+					<p>
+						Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.:
+						INZ000031633 CDSL: Depository services through Zerodha Securities
+						Pvt. Ltd. – SEBI Registration no.: IN-DP-100-2015 Commodity Trading
+						through Zerodha Commodities Pvt. Ltd. MCX: 46025 – SEBI Registration
+						no.: INZ000038238 Registered Address: Zerodha Broking Ltd.,
+						#153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School,
+						J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any
+						complaints pertaining to securities broking please write to
+						complaints@zerodha.com, for DP related to dp@zerodha.com. Please
+						ensure you carefully read the Risk Disclosure Document as prescribed
+						by SEBI | ICF
+					</p>
+
+					<p>
+						Procedure to file a complaint on SEBI SCORES: Register on SCORES
+						portal. Mandatory details for filing complaints on SCORES: Name,
+						PAN, Address, Mobile Number, E-mail ID. Benefits: Effective
+						Communication, Speedy redressal of the grievances
+					</p>
+
+					<p>
+						Investments in securities market are subject to market risks; read
+						all the related documents carefully before investing.
+					</p>
+
+					<p>
+						"Prevent unauthorised transactions in your account. Update your
+						mobile numbers/email IDs with your stock brokers. Receive
+						information of your transactions directly from Exchange on your
+						mobile/email at the end of the day. Issued in the interest of
+						investors. KYC is one time exercise while dealing in securities
+						markets - once KYC is done through a SEBI registered intermediary
+						(broker, DP, Mutual Fund etc.), you need not undergo the same
+						process again when you approach another intermediary." Dear
+						Investor, if you are subscribing to an IPO, there is no need to
+						issue a cheque. Please write the Bank account number and sign the
+						IPO application form to authorize your bank to make payment in case
+						of allotment. In case of non allotment the funds will remain in your
+						bank account. As a business we don't give stock tips, and have not
+						authorized anyone to trade on behalf of others. If you find anyone
+						claiming to be part of Zerodha and offering such services, please
+						create a ticket here.
+					</p>
+				</div>
+				<div className="justify-content-center d-flex mt-3">
+					<a
+						className="px-2 "
+						style={{ textDecoration: "none", color: "9b9b9b" }}
+						href=""
+					>
+						NSE
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						BSE
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						NCX
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						Terms & conditions
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						Policies & procedures
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						Privacy policy
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						Disclosure
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						For investor's attention
+					</a>
+					<a className="px-2" style={{ textDecoration: "none" }} href="">
+						Investor charter
+					</a>
 				</div>
 			</div>
-		</div>
+		</footer>
 	);
 }
 
