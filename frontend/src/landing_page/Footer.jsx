@@ -28,73 +28,201 @@ function Footer() {
 					</div>
 					<div className="col">
 						<p className="fs-5 fw-semibold">Company</p>
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							About
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Products
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Pricing
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Referral programme
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Careers
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Zerodha.tech
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Press & media
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Zerodha cares (CSR)
 						</a>
 						<br />
 					</div>
 					<div className="col">
 						<p className="fs-5 fw-semibold">Support</p>
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Contact
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Support portal
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Z-Connect blog
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							List of charges
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Downloads & resources
 						</a>
 						<br />
 					</div>
 					<div className="col">
 						<p className="fs-5 fw-semibold">Account</p>
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Open an account
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							Fund transfer
 						</a>
 						<br />
-						<a className="fw-semibold" href="">
+						<a
+							style={{
+								marginBottom: "10px",
+								textDecoration: "none",
+								color: "#666666",
+							}}
+							className="fw-semibold"
+							href=""
+						>
 							60 day challenge
 						</a>
 						<br />
@@ -146,36 +274,68 @@ function Footer() {
 						create a ticket here.
 					</p>
 				</div>
-				<div className="justify-content-center d-flex mt-3">
+				<div className="justify-content-center d-flex mt-3 pb-3">
 					<a
 						className="px-2 "
-						style={{ textDecoration: "none", color: "9b9b9b" }}
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
 						href=""
 					>
 						NSE
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						BSE
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						NCX
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						Terms & conditions
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						Policies & procedures
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						Privacy policy
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						Disclosure
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						For investor's attention
 					</a>
-					<a className="px-2" style={{ textDecoration: "none" }} href="">
+					<a
+						className="px-2"
+						style={{ textDecoration: "none", color: "#9b9b9b" }}
+						href=""
+					>
 						Investor charter
 					</a>
 				</div>
