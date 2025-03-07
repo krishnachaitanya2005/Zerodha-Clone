@@ -9,7 +9,15 @@ function Universe() {
 					Extend your trading and investment experience even further with our
 					partner platforms
 				</p>
-				<div className="d-flex flex-column text-center justify-content-center col-4">
+				<div
+					className="testimonials  col-4"
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<img
 						style={{ height: "50px", width: "200px" }}
 						src="media\zerodhaFundhouse.png"
@@ -33,7 +41,15 @@ function Universe() {
 						strategies without coding.
 					</p>
 				</div>
-				<div className="d-flex flex-column justify-content-center col-4 p-3">
+				<div
+					className="testimonials  col-4  p-3"
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<img
 						style={{ height: "60px", width: "200px" }}
 						src="media\sensibullLogo.svg"
@@ -58,7 +74,15 @@ function Universe() {
 						baskets of stocks on ETFs.
 					</p>
 				</div>
-				<div className="d-flex flex-column justify-content-center col-4 p-3">
+				<div
+					className="testimonials  col-4  p-3"
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<img
 						style={{ height: "50px", width: "200px" }}
 						src="media\goldenpiLogo.png"
