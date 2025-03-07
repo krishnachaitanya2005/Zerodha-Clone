@@ -8,9 +8,6 @@ function PricingPage() {
 		<div>
 			<Hero />
 			<OpenAccount />
-			<br />
-			<br />
-
 			<Brokerage />
 		</div>
 	);
