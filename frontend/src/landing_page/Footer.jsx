@@ -14,15 +14,15 @@ function Footer() {
 							&copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
 						</p>
 						<div className="social-icons pb-3">
-							<i class="fa-brands fa-x-twitter px-3"></i>
-							<i class="fa-brands fa-facebook px-3"></i>
-							<i class="fa-brands fa-instagram px-3"></i>
-							<i class="fa-brands fa-linkedin-in px-3"></i>
+							<i className="fa-brands fa-x-twitter px-3"></i>
+							<i className="fa-brands fa-facebook px-3"></i>
+							<i className="fa-brands fa-instagram px-3"></i>
+							<i className="fa-brands fa-linkedin-in px-3"></i>
 						</div>
 						<div className="social-icons">
-							<i class="fa-brands fa-youtube px-3"></i>
-							<i class="fa-brands fa-whatsapp px-3"></i>
-							<i class="fa-brands fa-telegram px-3"></i>
+							<i className="fa-brands fa-youtube px-3"></i>
+							<i className="fa-brands fa-whatsapp px-3"></i>
+							<i className="fa-brands fa-telegram px-3"></i>
 						</div>
 					</div>
 					<div className="col">

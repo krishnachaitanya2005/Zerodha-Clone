@@ -53,7 +53,7 @@ function NavBar() {
 							</li>
 							<li className="nav-item">
 								<Link className="nav-link" to="/">
-									<i class="fa-solid fa-bars fs-5"></i>
+									<i className="fa-solid fa-bars fs-5"></i>
 								</Link>
 							</li>
 						</ul>
