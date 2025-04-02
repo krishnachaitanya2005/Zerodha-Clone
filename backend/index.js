@@ -17,8 +17,8 @@ const uri = process.env.MONGO_URL;
 const app = express();
 
 const allowedOrigins = [
-	"https://zerodha-clone-virid.vercel.app/",
-	"https://zerodha-clone-jcg8.vercel.app/",
+	"https://zerodha-clone-virid.vercel.app",
+	"https://zerodha-clone-jcg8.vercel.app",
 ];
 
 app.use(
@@ -29,6 +29,15 @@ app.use(
 		credentials: true, // <-- This is required to allow credentials (cookies, auth headers)
 	})
 );
+
+// Allow preflight requests for all routes (must be before routes)
+app.options("*", cors());
+
+//  Log incoming request origins (for debugging)
+app.use((req, res, next) => {
+	console.log("Request Origin:", req.headers.origin);
+	next();
+});
 
 // app.use(cors());
 // app.use(
