@@ -46,10 +46,11 @@ function Stats() {
 					/>
 					<div className="d-flex gap-5 mt-4 justify-content-center link-primary">
 						<a href="#" style={{ color: "#007bff", textDecoration: "none" }}>
-							Explore our products <i class="fa-solid fa-arrow-right-long"></i>
+							Explore our products{" "}
+							<i className="fa-solid fa-arrow-right-long"></i>
 						</a>
 						<a href="#" style={{ color: "#007bff", textDecoration: "none" }}>
-							Try Kite demo <i class="fa-solid fa-arrow-right-long"></i>
+							Try Kite demo <i className="fa-solid fa-arrow-right-long"></i>
 						</a>
 					</div>
 				</div>

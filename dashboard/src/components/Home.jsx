@@ -35,11 +35,13 @@ const Home = () => {
 	}, [cookies, navigate, removeCookie]);
 	const Logout = () => {
 		removeCookie("token");
-		navigate("/signup");
+		window.location.href = "http://localhost:5174/login";
 	};
 
 	return (
 		<>
+			{" "}
+			<button onClick={Logout}>LOGOUT</button>
 			<TopBar username={username} />
 			<Dashboard username={username} />
 		</>

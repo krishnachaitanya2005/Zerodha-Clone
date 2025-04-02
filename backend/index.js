@@ -16,13 +16,13 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-// app.use(cors());
-app.use(
-	cors({
-		origin: "http://localhost:5174", // Allow only your frontend domain
-		credentials: true, // Allow credentials (cookies, headers)
-	})
-);
+app.use(cors());
+// app.use(
+// 	cors({
+// 		origin: "http://localhost:5173", // Allow only your frontend domain
+// 		credentials: true, // Allow credentials (cookies, headers)
+// 	})
+// );
 app.use(cookieParser());
 
 app.use(express.json());

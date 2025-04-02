@@ -13,7 +13,8 @@ function Hero() {
 				<p className="fs-6 fw-medium text-light-emphasis">
 					Check out our{" "}
 					<a style={{ textDecoration: "none", color: "#007bff" }} href="">
-						investment offerings <i class="fa-solid fa-arrow-right-long"></i>
+						investment offerings{" "}
+						<i className="fa-solid fa-arrow-right-long"></i>
 					</a>
 				</p>
 			</div>

@@ -26,10 +26,10 @@ function LeftSection({ imageUrl, title, description }) {
 						}}
 						href=""
 					>
-						Try demo <i class="fa-solid fa-arrow-right-long"></i>
+						Try demo <i className="fa-solid fa-arrow-right-long"></i>
 					</a>
 					<a style={{ textDecoration: "none", color: "#007bff" }} href="">
-						Learn more <i class="fa-solid fa-arrow-right-long"></i>
+						Learn more <i className="fa-solid fa-arrow-right-long"></i>
 					</a>
 				</p>
 				<img

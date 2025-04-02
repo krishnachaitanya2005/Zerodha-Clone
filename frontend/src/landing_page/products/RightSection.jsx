@@ -13,7 +13,7 @@ function RightSection({ imageUrl, title, description }) {
 				</p>
 				<p>
 					<a style={{ textDecoration: "none", color: "#007bff" }} href="">
-						Learn more <i class="fa-solid fa-arrow-right-long"></i>
+						Learn more <i className="fa-solid fa-arrow-right-long"></i>
 					</a>
 				</p>
 			</div>

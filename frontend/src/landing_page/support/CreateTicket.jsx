@@ -9,7 +9,7 @@ function CreateTicket() {
 				</h4>
 				<div className="col-4">
 					<h4 className="py-4">
-						<i class="fa-regular fa-square-plus"></i> Account Opening
+						<i className="fa-regular fa-square-plus"></i> Account Opening
 					</h4>
 					<a
 						style={{
@@ -72,7 +72,7 @@ function CreateTicket() {
 					</a>
 					{/* end */}
 					<h4 className="py-4">
-						<i class="fa-regular fa-credit-card"></i> Funds{" "}
+						<i className="fa-regular fa-credit-card"></i> Funds{" "}
 					</h4>
 					<a
 						style={{
@@ -124,7 +124,7 @@ function CreateTicket() {
 				</div>
 				<div className="col-4">
 					<h4 className="py-4">
-						<i class="fa-regular fa-user"></i> Your Zerodha Account
+						<i className="fa-regular fa-user"></i> Your Zerodha Account
 					</h4>
 					<a
 						style={{
@@ -187,7 +187,7 @@ function CreateTicket() {
 					</a>
 					{/* end */}
 					<h4 className="py-4">
-						<i class="fa-solid fa-c"></i> Console
+						<i className="fa-solid fa-c"></i> Console
 					</h4>
 					<a
 						style={{
@@ -263,7 +263,7 @@ function CreateTicket() {
 				</div>
 				<div className="col-4">
 					<h4 className="py-4">
-						<i class="fa-solid fa-chart-simple"></i> Kite
+						<i className="fa-solid fa-chart-simple"></i> Kite
 					</h4>
 					<a
 						style={{
@@ -338,7 +338,7 @@ function CreateTicket() {
 					</a>
 					{/* end */}
 					<h4 className="py-4">
-						<i class="fa-solid fa-coins"></i> Coin
+						<i className="fa-solid fa-coins"></i> Coin
 					</h4>
 					<a
 						style={{

@@ -12,15 +12,15 @@ function Hero() {
 					<p className="fs-3">
 						Search for an answer or browse help topics to create a ticket
 					</p>
-					<form class="d-flex" role="search">
+					<form className="d-flex" role="search">
 						<input
-							class="form-control me-2 rounded-0"
+							className="form-control me-2 rounded-0"
 							type="search"
 							placeholder="Eg: how do i activate F&O, why is my order getting rejected ..."
 							aria-label="Search"
 							style={{ height: "50px", width: "600px" }}
 						></input>
-						{/* <button class="btn btn-outline-success" type="submit">
+						{/* <button className="btn btn-outline-success" type="submit">
 							Search
 						</button> */}
 					</form>
