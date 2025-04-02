@@ -31,8 +31,13 @@ app.use(
 );
 
 // Allow preflight requests for all routes (must be before routes)
-app.options("*", cors());
-
+app.options("*", (req, res) => {
+	res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
+	res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+	res.header("Access-Control-Allow-Credentials", "true");
+	return res.sendStatus(200); // Ensure a proper response instead of 204
+});
 //  Log incoming request origins (for debugging)
 app.use((req, res, next) => {
 	console.log("Request Origin:", req.headers.origin);
