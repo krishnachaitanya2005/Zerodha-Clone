@@ -17,10 +17,10 @@ const Home = () => {
 	useEffect(() => {
 		const verifyCookie = async () => {
 			if (!cookies.token) {
-				window.location.href = "http://localhost:5174/login";
+				window.location.href = "https://zerodha-clone-virid.vercel.app/login";
 			}
 			const { data } = await axios.post(
-				"http://localhost:8080",
+				"https://zerodha-clone-kfwu.onrender.com",
 				{},
 				{ withCredentials: true }
 			);
@@ -31,13 +31,14 @@ const Home = () => {
 						position: "top-right",
 				  })
 				: (removeCookie("token"),
-				  (window.location.href = "http://localhost:5174/login"));
+				  (window.location.href =
+						"https://zerodha-clone-virid.vercel.app/login"));
 		};
 		verifyCookie();
 	}, [cookies, navigate, removeCookie]);
 	const Logout = () => {
 		removeCookie("token");
-		window.location.href = "http://localhost:5174/";
+		window.location.href = "https://zerodha-clone-virid.vercel.app/";
 	};
 
 	return (

@@ -14,7 +14,7 @@ const BuyActionWindow = ({ uid }) => {
 	const { closeBuyWindow } = useContext(GeneralContext);
 
 	const handleBuyClick = () => {
-		axios.post("http://localhost:8080/newOrder", {
+		axios.post("https://zerodha-clone-kfwu.onrender.com/newOrder", {
 			name: uid,
 			qty: stockQuantity,
 			price: stockPrice,

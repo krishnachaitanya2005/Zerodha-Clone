@@ -16,7 +16,10 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:5174", "http://localhost:5173"];
+const allowedOrigins = [
+	"https://zerodha-clone-virid.vercel.app/",
+	"https://zerodha-clone-jcg8.vercel.app/",
+];
 
 app.use(
 	cors({
@@ -228,7 +231,7 @@ app.post("/newOrder", async (req, res) => {
 	res.send("Orders Saved!");
 });
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
 	console.log("App started!");
 	mongoose.connect(uri);
 	console.log("DB connected!");

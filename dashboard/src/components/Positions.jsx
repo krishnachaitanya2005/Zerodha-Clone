@@ -7,10 +7,12 @@ import axios from "axios";
 const Positions = () => {
 	const [allPositions, setAllPositions] = useState([]);
 	useEffect(() => {
-		axios.get("http://localhost:8080/allPositions").then((res) => {
-			console.log(res.data);
-			setAllPositions(res.data);
-		});
+		axios
+			.get("https://zerodha-clone-kfwu.onrender.com/allPositions")
+			.then((res) => {
+				console.log(res.data);
+				setAllPositions(res.data);
+			});
 	}, []);
 	return (
 		<>
