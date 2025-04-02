@@ -8,6 +8,8 @@ import { ToastContainer, toast } from "react-toastify";
 import Dashboard from "./Dashboard";
 import TopBar from "./TopBar";
 
+import { Button } from "@mui/material";
+
 const Home = () => {
 	const navigate = useNavigate();
 	const [cookies, removeCookie] = useCookies([]);
@@ -35,13 +37,14 @@ const Home = () => {
 	}, [cookies, navigate, removeCookie]);
 	const Logout = () => {
 		removeCookie("token");
-		window.location.href = "http://localhost:5174/login";
+		window.location.href = "http://localhost:5174/";
 	};
 
 	return (
 		<>
-			{" "}
-			<button onClick={Logout}>LOGOUT</button>
+			<Button variant="outlined" onClick={Logout}>
+				Logout
+			</Button>
 			<TopBar username={username} />
 			<Dashboard username={username} />
 		</>
