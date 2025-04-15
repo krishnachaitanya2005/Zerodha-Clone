@@ -13,6 +13,12 @@ const Menu = () => {
 		setIsProfileDropdownOpen(!isProfileDropdownOpen);
 	};
 
+	//added this code
+	const Logout = () => {
+		removeCookie("token");
+		window.location.href = "https://zerodha-clone-virid.vercel.app/";
+	};
+
 	const menuClass = "menu";
 	const activeMenuClass = "menu selected";
 	return (
@@ -85,6 +91,21 @@ const Menu = () => {
 								Apps
 							</p>
 						</Link>{" "}
+					</li>
+					{/* added this lines */}
+					<li>
+						<Link
+							to=""
+							onClick={() => {
+								handleMenuClick(6);
+								Logout();
+							}}
+							style={{ textDecoration: "none" }}
+						>
+							<p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
+								Logout
+							</p>
+						</Link>
 					</li>
 				</ul>
 				<hr />

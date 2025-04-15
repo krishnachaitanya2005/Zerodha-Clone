@@ -4,7 +4,8 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
 const Signup = () => {
-	const navigate = useNavigate();
+	axios.defaults.withCredentials = true;
+
 	const [inputValue, setInputValue] = useState({
 		email: "",
 		password: "",
@@ -30,25 +31,59 @@ const Signup = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		// console.log("Signup form submitted with values:", inputValue);
 		try {
-			const { data } = await axios.post(
+			const response = await axios.post(
 				"https://zerodha-clone-kfwu.onrender.com/signup",
 				{
 					...inputValue,
 				},
-				{ withCredentials: true }
+				{
+					withCredentials: true,
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json",
+					},
+				}
 			);
-			const { success, message } = data;
+			// console.log("Complete response:", response);
+			// console.log("Response headers:", response.headers);
+			// console.log("Response data:", response.data);
+
+			const { success, message, user } = response.data;
+
+			// Check for token in different locations
+			let token = response.data.token;
+			if (!token && response.headers["authorization"]) {
+				token = response.headers["authorization"].split(" ")[1];
+			}
+
+			// console.log("Token found:", token);
+
 			if (success) {
 				handleSuccess(message);
-				setTimeout(() => {
-					window.location.href = "https://zerodha-clone-jcg8.vercel.app";
-				}, 1000);
+
+				// If we have a token, proceed with redirect
+				if (token) {
+					const redirectUrl = `https://zerodha-clone-jcg8.vercel.app/?token=${token}&user=${user}`;
+					// console.log("Redirecting to:", redirectUrl);
+					setTimeout(() => {
+						window.location.href = redirectUrl;
+					}, 1000);
+				} else {
+					// console.error("No token found in response");
+					handleError("Authentication failed - no token received");
+				}
 			} else {
 				handleError(message);
 			}
 		} catch (error) {
-			console.log(error);
+			console.error("Signup error:", error);
+			if (error.response) {
+				console.error("Error response data:", error.response.data);
+				console.error("Error response status:", error.response.status);
+				console.error("Error response headers:", error.response.headers);
+			}
 		}
 		setInputValue({
 			...inputValue,
@@ -57,6 +92,60 @@ const Signup = () => {
 			username: "",
 		});
 	};
+
+	// const navigate = useNavigate();
+	// const [inputValue, setInputValue] = useState({
+	// 	email: "",
+	// 	password: "",
+	// 	username: "",
+	// });
+	// const { email, password, username } = inputValue;
+	// const handleOnChange = (e) => {
+	// 	const { name, value } = e.target;
+	// 	setInputValue({
+	// 		...inputValue,
+	// 		[name]: value,
+	// 	});
+	// };
+
+	// const handleError = (err) =>
+	// 	toast.error(err, {
+	// 		position: "bottom-left",
+	// 	});
+	// const handleSuccess = (msg) =>
+	// 	toast.success(msg, {
+	// 		position: "bottom-right",
+	// 	});
+
+	// const handleSubmit = async (e) => {
+	// 	e.preventDefault();
+	// 	try {
+	// 		const { data } = await axios.post(
+	// 			"https://zerodha-clone-kfwu.onrender.com/signup",
+	// 			{
+	// 				...inputValue,
+	// 			},
+	// 			{ withCredentials: true }
+	// 		);
+	// 		const { success, message } = data;
+	// 		if (success) {
+	// 			handleSuccess(message);
+	// 			setTimeout(() => {
+	// 				window.location.href = "https://zerodha-clone-jcg8.vercel.app";
+	// 			}, 1000);
+	// 		} else {
+	// 			handleError(message);
+	// 		}
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 	}
+	// 	setInputValue({
+	// 		...inputValue,
+	// 		email: "",
+	// 		password: "",
+	// 		username: "",
+	// 	});
+	// };
 
 	return (
 		<div
