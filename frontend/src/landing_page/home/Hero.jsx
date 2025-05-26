@@ -5,7 +5,7 @@ function Hero() {
 	return (
 		<div className="container mb-5 pb-3">
 			<div className="hero-image d-flex flex-column justify-content-center align-items-center mb-5 pb-5">
-				<img className=" h-75 w-75 pt-5 mt-5" src="media/homeHero.png" />
+				<img className=" h-75 w-75 pt-5 mt-5" src="media/images/homeHero.png" />
 				<h1 className="fs-1 fw-semibold pt-5 text-light-emphasis">
 					Invest in everything
 				</h1>
