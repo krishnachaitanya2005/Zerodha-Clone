@@ -13,18 +13,15 @@ const BuyActionWindow = ({ uid }) => {
 	const [stockPrice, setStockPrice] = useState("");
 	const [error, setError] = useState("");
 
-	// ✅ Get closeBuyWindow from context
 	const { closeBuyWindow } = useContext(GeneralContext);
 
 	const handleBuyClick = async (e) => {
-		e.preventDefault(); // Prevent default link behavior
-		setError(""); // Clear any previous errors
+		e.preventDefault();
+		setError("");
 
-		// Convert and validate inputs
 		const quantity = parseInt(stockQuantity, 10);
 		const price = parseFloat(stockPrice);
 
-		// Validation checks
 		if (!quantity || isNaN(quantity) || quantity <= 0) {
 			setError("Please enter a valid quantity");
 			return;
@@ -36,45 +33,26 @@ const BuyActionWindow = ({ uid }) => {
 		}
 
 		try {
-			// Debug: Log all cookies
-			// console.log("All cookies:", document.cookie);
-
-			// Get userId from the token
 			const allCookies = document.cookie.split("; ");
-			// console.log("Split cookies:", allCookies);
 
 			const tokenCookie = allCookies.find((row) => row.startsWith("token="));
-			// console.log("Found token cookie:", tokenCookie);
 
 			const token = tokenCookie?.split("=")[1];
-			// console.log("Extracted token value:", token);
 
 			if (!token) {
 				setError("Authentication required. Please login again.");
-				// console.error("No token found in cookies");
 				window.location.href = "https://zerodha-clone-virid.vercel.app/login";
 				return;
 			}
 
 			const decodedToken = jwtDecode(token);
-			// console.log("Decoded token:", decodedToken);
 			const userId = decodedToken?.id;
-			// console.log("Extracted userId:", userId);
 
 			if (!userId) {
 				setError("Invalid session. Please login again.");
-				// console.error("No userId found in token");
 				window.location.href = "https://zerodha-clone-virid.vercel.app/login";
 				return;
 			}
-
-			// console.log("Sending request with data:", {
-			// 	name: uid,
-			// 	qty: quantity,
-			// 	price: price,
-			// 	mode: "BUY",
-			// 	userId: userId,
-			// });
 
 			const response = await axios.post(
 				"https://zerodha-clone-kfwu.onrender.com/newOrder",
@@ -94,11 +72,6 @@ const BuyActionWindow = ({ uid }) => {
 			);
 
 			if (response.data && response.data.success) {
-				// console.log("Order placed successfully:", response.data);
-				// Clear the form inputs
-				// setStockQuantity("");
-				// setStockPrice("");
-				// Close the window
 			} else {
 				setError(response.data?.message || "Failed to place order");
 				closeBuyWindow();
@@ -110,7 +83,6 @@ const BuyActionWindow = ({ uid }) => {
 				message: error.message,
 			});
 
-			// Handle different error cases
 			if (error.response) {
 				switch (error.response.status) {
 					case 401:
@@ -208,82 +180,3 @@ const BuyActionWindow = ({ uid }) => {
 };
 
 export default BuyActionWindow;
-
-// import React, { useState, useContext } from "react";
-// import { Link } from "react-router-dom";
-
-// import axios from "axios";
-
-// import GeneralContext from "./GeneralContext";
-// import { jwtDecode } from "jwt-decode";
-
-// import "./BuyActionWindow.css";
-
-// const BuyActionWindow = ({ uid }) => {
-// 	axios.defaults.withCredentials = true;
-
-// 	const [stockQuantity, setStockQuantity] = useState(1);
-// 	const [stockPrice, setStockPrice] = useState(0.0);
-// 	const [error, setError] = useState("");
-
-// 	const { closeBuyWindow } = useContext(GeneralContext);
-
-// 	const handleBuyClick = () => {
-// 		axios.post("https://zerodha-clone-kfwu.onrender.com/newOrder", {
-// 			name: uid,
-// 			qty: stockQuantity,
-// 			price: stockPrice,
-// 			mode: "BUY",
-// 		});
-
-// 		closeBuyWindow();
-// 	};
-
-// 	const handleCancelClick = () => {
-// 		closeBuyWindow();
-// 	};
-
-// 	return (
-// 		<div className="container" id="buy-window" draggable="true">
-// 			<div className="regular-order">
-// 				<div className="inputs">
-// 					<fieldset>
-// 						<legend>Qty.</legend>
-// 						<input
-// 							type="number"
-// 							name="qty"
-// 							id="qty"
-// 							onChange={(e) => setStockQuantity(e.target.value)}
-// 							value={stockQuantity}
-// 						/>
-// 					</fieldset>
-// 					<fieldset>
-// 						<legend>Price</legend>
-// 						<input
-// 							type="number"
-// 							name="price"
-// 							id="price"
-// 							step="0.05"
-// 							onChange={(e) => setStockPrice(e.target.value)}
-// 							value={stockPrice}
-// 						/>
-// 					</fieldset>
-// 				</div>
-// 			</div>
-
-// 			<div className="buttons">
-// 				<span>Margin required ₹140.65</span>
-// 				<div>
-// 					<Link className="btn btn-blue" onClick={handleBuyClick}>
-// 						Buy
-// 					</Link>
-// 					<Link to="" className="btn btn-grey" onClick={handleCancelClick}>
-// 						Cancel
-// 					</Link>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-// export default BuyActionWindow;
