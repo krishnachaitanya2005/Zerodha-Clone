@@ -19,7 +19,7 @@ function Hero() {
 						alignItems: "center",
 					}}
 				>
-					<img style={{ height: "250px" }} src="media\pricing0.svg" />
+					<img style={{ height: "250px" }} src="media\images\pricing0.svg" />
 					<h2 className="fw-semibold">Free equity delivery</h2>
 					<p style={{ width: "370px" }} className="text-muted">
 						{" "}
@@ -36,7 +36,7 @@ function Hero() {
 						alignItems: "center",
 					}}
 				>
-					<img style={{ height: "250px" }} src="media\intradayTrades.svg" />
+					<img style={{ height: "250px" }} src="media\images\intradayTrades.svg" />
 					<h2 className="fw-semibold">Intraday and F&O trades </h2>
 					<p style={{ width: "370px" }} className="text-muted">
 						Flat Rs.20 or 0.03% (whichever is lower) per executed order on
@@ -52,7 +52,7 @@ function Hero() {
 						alignItems: "center",
 					}}
 				>
-					<img style={{ height: "250px" }} src="media\pricing0.svg" />
+					<img style={{ height: "250px" }} src="media\images\pricing0.svg" />
 					<h2 className="fw-semibold">Free direct MF</h2>
 					<p style={{ width: "370px" }} className="text-muted">
 						{" "}

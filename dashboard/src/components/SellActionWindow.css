@@ -19,7 +19,7 @@
 
 .container .header {
 	width: 100%;
-	background: #f44336; /* Changed to a red color for the "Sell" action */
+	background: #f44336; 
 	box-sizing: border-box;
 	padding: 16px;
 	border-top-left-radius: var(--radius);

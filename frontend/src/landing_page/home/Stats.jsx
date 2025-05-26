@@ -41,7 +41,7 @@ function Stats() {
 				<div className="d-flex flex-column ps-5 ">
 					<img
 						className="float-end pe-5 me-5"
-						src="media\ecosystem.png"
+						src="media\images\ecosystem.png"
 						style={{ width: "90%" }}
 					/>
 					<div className="d-flex gap-5 mt-4 justify-content-center link-primary">
@@ -56,7 +56,7 @@ function Stats() {
 				</div>
 			</div>
 			<center className="mt-5">
-				<img src="media\pressLogos.png" />
+				<img src="media\images\pressLogos.png" />
 			</center>
 		</div>
 	);

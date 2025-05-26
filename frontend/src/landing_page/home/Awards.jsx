@@ -4,7 +4,7 @@ function Awards() {
 	return (
 		<div className="container my-5 py-5">
 			<div className="float-start h-75 w-50 ">
-				<img src="media\largestBroker.svg" />
+				<img src="media\images\largestBroker.svg" />
 			</div>
 			<div>
 				<h1 className="fw-semibold">Largest stock broker in India</h1>

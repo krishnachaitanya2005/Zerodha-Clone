@@ -20,7 +20,7 @@ function Universe() {
 				>
 					<img
 						style={{ height: "50px", width: "200px" }}
-						src="media\zerodhaFundhouse.png"
+						src="media\images\zerodhaFundhouse.png"
 					/>
 					<p
 						className="text-muted"
@@ -31,7 +31,7 @@ function Universe() {
 					</p>
 					<img
 						style={{ height: "50px", width: "150px" }}
-						src="media\streakLogo.png"
+						src="media\images\streakLogo.png"
 					/>
 					<p
 						className="text-muted"
@@ -52,7 +52,7 @@ function Universe() {
 				>
 					<img
 						style={{ height: "60px", width: "200px" }}
-						src="media\sensibullLogo.svg"
+						src="media\images\sensibullLogo.svg"
 					/>
 					<p
 						className="text-muted"
@@ -64,7 +64,7 @@ function Universe() {
 					</p>
 					<img
 						style={{ height: "50px", width: "200px" }}
-						src="media\smallcaseLogo.png"
+						src="media\images\smallcaseLogo.png"
 					/>
 					<p
 						className="text-muted"
@@ -85,7 +85,7 @@ function Universe() {
 				>
 					<img
 						style={{ height: "50px", width: "200px" }}
-						src="media\goldenpiLogo.png"
+						src="media\images\goldenpiLogo.png"
 					/>
 					<p
 						className="text-muted"
@@ -96,7 +96,7 @@ function Universe() {
 					</p>
 					<img
 						style={{ height: "50px", width: "170px" }}
-						src="media\dittoLogo.png"
+						src="media\images\dittoLogo.png"
 					/>
 					<p
 						className="text-muted"

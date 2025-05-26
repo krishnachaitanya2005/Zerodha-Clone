@@ -12,7 +12,7 @@ function Team() {
 					<img
 						style={{ width: "300px", height: "300px" }}
 						className="rounded-circle"
-						src="media\nithinKamath.jpg"
+						src="media\images\nithinKamath.jpg"
 					/>
 					<h4 className="fw-semibold pt-4">Nithin Kamath</h4>
 					<p>Founder, CEO</p>

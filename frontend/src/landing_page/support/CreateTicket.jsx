@@ -70,7 +70,6 @@ function CreateTicket() {
 					>
 						Glossary
 					</a>
-					{/* end */}
 					<h4 className="py-4">
 						<i className="fa-regular fa-credit-card"></i> Funds{" "}
 					</h4>
@@ -185,7 +184,6 @@ function CreateTicket() {
 					>
 						Transfer and conversion of securities
 					</a>
-					{/* end */}
 					<h4 className="py-4">
 						<i className="fa-solid fa-c"></i> Console
 					</h4>
@@ -336,7 +334,6 @@ function CreateTicket() {
 					>
 						General{" "}
 					</a>
-					{/* end */}
 					<h4 className="py-4">
 						<i className="fa-solid fa-coins"></i> Coin
 					</h4>

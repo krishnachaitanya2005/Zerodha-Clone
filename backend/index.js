@@ -30,31 +30,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-// Allow preflight requests for all routes (must be before routes)
-// app.options("*", (req, res) => {
-// 	res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
-// 	res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-// 	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-// 	res.header("Access-Control-Allow-Credentials", "true");
-// 	return res.sendStatus(200); // Ensure a proper response instead of 204
-// });
-//  Log incoming request origins (for debugging)
-// app.use((req, res, next) => {
-// 	console.log("Request Origin:", req.headers.origin);
-// 	next();
-// });
-
-// app.use(cors());
-// app.use(
-// 	cors({
-// 		origin: "http://localhost:5173", // Allow only your frontend domain
-// 		credentials: true, // Allow credentials (cookies, headers)
-// 	})
-// );
-
 app.use(cookieParser());
-
-// app.use(express.json());
 
 app.use("/", authRoute);
 
@@ -248,7 +224,7 @@ app.post("/newOrder", async (req, res) => {
 			qty: req.body.qty,
 			price: req.body.price,
 			mode: req.body.mode,
-			userId: req.body.userId, // Get the userId from the authenticated user
+			userId: req.body.userId,
 		});
 
 		const savedOrder = await order.save();
@@ -261,18 +237,6 @@ app.post("/newOrder", async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 });
-
-// app.post("/newOrder", async (req, res) => {
-// 	let newOrders = new OrdersModel({
-// 		name: req.body.name,
-// 		qty: req.body.qty,
-// 		price: req.body.price,
-// 		mode: req.body.mode,
-// 		userId: req.body.userId,
-// 	});
-// 	newOrders.save();
-// 	res.send("Orders Saved!");
-// });
 
 app.listen(PORT, () => {
 	console.log("App started!");

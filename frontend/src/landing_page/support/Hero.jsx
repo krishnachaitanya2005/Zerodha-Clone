@@ -20,9 +20,6 @@ function Hero() {
 							aria-label="Search"
 							style={{ height: "50px", width: "600px" }}
 						></input>
-						{/* <button className="btn btn-outline-success" type="submit">
-							Search
-						</button> */}
 					</form>
 					<div className="pt-3">
 						<a href="" style={{ color: "white", paddingRight: "25px" }}>

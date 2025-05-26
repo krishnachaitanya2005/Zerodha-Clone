@@ -38,7 +38,6 @@ const Login = () => {
 				},
 				{ withCredentials: true }
 			);
-			// console.log(data);
 			const { success, message, token, user } = data;
 			if (success) {
 				handleSuccess(message);
@@ -57,59 +56,6 @@ const Login = () => {
 			password: "",
 		});
 	};
-
-	// const navigate = useNavigate();
-	// const [inputValue, setInputValue] = useState({
-	// 	email: "",
-	// 	password: "",
-	// });
-	// const { email, password } = inputValue;
-	// const handleOnChange = (e) => {
-	// 	const { name, value } = e.target;
-	// 	setInputValue({
-	// 		...inputValue,
-	// 		[name]: value,
-	// 	});
-	// };
-
-	// const handleError = (err) =>
-	// 	toast.error(err, {
-	// 		position: "bottom-left",
-	// 	});
-	// const handleSuccess = (msg) =>
-	// 	toast.success(msg, {
-	// 		position: "bottom-left",
-	// 	});
-
-	// const handleSubmit = async (e) => {
-	// 	e.preventDefault();
-	// 	try {
-	// 		const { data } = await axios.post(
-	// 			"https://zerodha-clone-kfwu.onrender.com/login",
-	// 			{
-	// 				...inputValue,
-	// 			},
-	// 			{ withCredentials: true }
-	// 		);
-	// 		console.log(data);
-	// 		const { success, message } = data;
-	// 		if (success) {
-	// 			handleSuccess(message);
-	// 			setTimeout(() => {
-	// 				window.location.href = "https://zerodha-clone-jcg8.vercel.app";
-	// 			}, 1000);
-	// 		} else {
-	// 			handleError(message);
-	// 		}
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// 	setInputValue({
-	// 		...inputValue,
-	// 		email: "",
-	// 		password: "",
-	// 	});
-	// };
 
 	return (
 		<div

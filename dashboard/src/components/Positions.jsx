@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// import { holdings, positions } from "../data/data.js";
-
 import axios from "axios";
 
 const Positions = () => {

@@ -34,9 +34,9 @@ function LeftSection({ imageUrl, title, description }) {
 				</p>
 				<img
 					style={{ height: "40px", paddingRight: "20px" }}
-					src="media\googlePlayBadge.svg"
+					src="media\images\googlePlayBadge.svg"
 				/>
-				<img src="media\appstoreBadge.svg" />
+				<img src="media\images\appstoreBadge.svg" />
 			</div>
 		</div>
 	);
