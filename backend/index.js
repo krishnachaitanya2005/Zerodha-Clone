@@ -11,6 +11,8 @@ const { HoldingsModel } = require("./models/HoldingsModel");
 const { PositionsModel } = require("./models/PositionsModel");
 const { OrdersModel } = require("./models/OrdersModel");
 
+const User = require("./model/UserModel");
+
 const PORT = process.env.PORT || 8080;
 const uri = process.env.MONGO_URL;
 
@@ -24,25 +26,25 @@ const allowedOrigins = [
 app.use(
 	cors({
 		origin: allowedOrigins,
-		methods: "GET,POST,PUT,DELETE,OPTIONS",
-		allowedHeaders: "Content-Type,Authorization",
-		credentials: true, // <-- This is required to allow credentials (cookies, auth headers)
+		credentials: true,
 	})
 );
 
+app.use(bodyParser.json());
+
 // Allow preflight requests for all routes (must be before routes)
-app.options("*", (req, res) => {
-	res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
-	res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-	res.header("Access-Control-Allow-Credentials", "true");
-	return res.sendStatus(200); // Ensure a proper response instead of 204
-});
+// app.options("*", (req, res) => {
+// 	res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
+// 	res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+// 	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+// 	res.header("Access-Control-Allow-Credentials", "true");
+// 	return res.sendStatus(200); // Ensure a proper response instead of 204
+// });
 //  Log incoming request origins (for debugging)
-app.use((req, res, next) => {
-	console.log("Request Origin:", req.headers.origin);
-	next();
-});
+// app.use((req, res, next) => {
+// 	console.log("Request Origin:", req.headers.origin);
+// 	next();
+// });
 
 // app.use(cors());
 // app.use(
@@ -54,7 +56,7 @@ app.use((req, res, next) => {
 
 app.use(cookieParser());
 
-app.use(express.json());
+// app.use(express.json());
 
 app.use("/", authRoute);
 
@@ -234,16 +236,45 @@ app.get("/allPositions", async (req, res) => {
 	res.send(allPositions);
 });
 
-app.post("/newOrder", async (req, res) => {
-	let newOrders = new OrdersModel({
-		name: req.body.name,
-		qty: req.body.qty,
-		price: req.body.price,
-		mode: req.body.mode,
-	});
-	newOrders.save();
-	res.send("Orders Saved!");
+app.get("/getOrders", async (req, res) => {
+	const userId = req.query.userId;
+
+	const orders = await OrdersModel.find({ userId });
+	res.json(orders);
 });
+
+app.post("/newOrder", async (req, res) => {
+	try {
+		const order = new OrdersModel({
+			name: req.body.name,
+			qty: req.body.qty,
+			price: req.body.price,
+			mode: req.body.mode,
+			userId: req.body.userId, // Get the userId from the authenticated user
+		});
+
+		const savedOrder = await order.save();
+
+		res
+			.status(201)
+			.json({ message: "Order saved successfully", order: savedOrder });
+	} catch (error) {
+		console.error("Error saving order:", error);
+		res.status(500).json({ error: error.message });
+	}
+});
+
+// app.post("/newOrder", async (req, res) => {
+// 	let newOrders = new OrdersModel({
+// 		name: req.body.name,
+// 		qty: req.body.qty,
+// 		price: req.body.price,
+// 		mode: req.body.mode,
+// 		userId: req.body.userId,
+// 	});
+// 	newOrders.save();
+// 	res.send("Orders Saved!");
+// });
 
 app.listen(PORT, () => {
 	console.log("App started!");

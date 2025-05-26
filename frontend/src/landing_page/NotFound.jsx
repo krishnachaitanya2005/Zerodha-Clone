@@ -1,6 +1,6 @@
 import React from "react";
 
-function OpenAccount() {
+function NotFound() {
 	return (
 		<div className="container text-center">
 			<h1 className="fs-2 fw-semibold pt-5 text-light-emphasis">
@@ -13,4 +13,4 @@ function OpenAccount() {
 	);
 }
 
-export default OpenAccount;
+export default NotFound;

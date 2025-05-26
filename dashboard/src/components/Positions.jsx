@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Positions = () => {
+	axios.defaults.withCredentials = true;
+
 	const [allPositions, setAllPositions] = useState([]);
 	useEffect(() => {
 		axios

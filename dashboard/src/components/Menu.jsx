@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useCookies } from "react-cookie";
+
 const Menu = () => {
 	const [selectedMenu, setSelectedMenu] = useState(0);
 	const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+	const [cookies, removeCookie] = useCookies(["token"]);
 
 	const handleMenuClick = (index) => {
 		setSelectedMenu(index);

@@ -4,6 +4,11 @@ const OrdersSchema = new Schema({
 	qty: Number,
 	price: Number,
 	mode: String,
+	userId: {
+		type: Types.ObjectId,
+		ref: "User",
+		required: true,
+	},
 });
 
 module.exports = { OrdersSchema };

@@ -4,6 +4,8 @@ import { VerticalGraph } from "./VerticalGraph";
 // import { holdings } from "../data/data.js";
 
 const Holdings = () => {
+	axios.defaults.withCredentials = true;
+
 	const [allHoldings, setAllHoldings] = useState([]);
 	useEffect(() => {
 		axios
