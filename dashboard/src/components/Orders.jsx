@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import jwtDecode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import { useCookies } from "react-cookie";
 
 const Orders = () => {
