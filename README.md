@@ -19,5 +19,5 @@ This is a full-stack stock trading web application inspired by Zerodha, designed
 **Other Tools:** Git, GitHub for version control and collaboration
 
 ## **Live Demo**
-The application can be viewed (if deployed) at: https://zerodha-clone-virid.vercel.app/
+The application can be viewed at: https://zerodha-clone-virid.vercel.app/
 
