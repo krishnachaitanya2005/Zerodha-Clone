@@ -11,8 +11,6 @@ const { HoldingsModel } = require("./models/HoldingsModel");
 const { PositionsModel } = require("./models/PositionsModel");
 const { OrdersModel } = require("./models/OrdersModel");
 
-const User = require("./model/UserModel");
-
 const PORT = process.env.PORT || 8080;
 const uri = process.env.MONGO_URL;
 
